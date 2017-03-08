@@ -1,0 +1,31 @@
+(defun tic-tac-toe ()
+	(format t "Who goes first?: ")
+	(let ((first-turn (read)))
+		;(format t "first-turn is ~A" first-turn)
+		(cond
+			((equal first-turn 'H) 
+				(format t "Human goes first.~%")
+				(run-game (create-board) 'H)
+			)
+			((equal first-turn 'C) 
+				(run-game (create-board) 'C)
+			)
+			(t
+				(format t "Please input C for computer or H for human.~%")
+				(tic-tac-toe)
+			)
+		)
+	)
+)
+
+(defun create-board ()
+	(setf TTTboard (make-array '(3 3) :initial-element '-))
+	(format t "This is the TTT array: ~A" TTTboard)
+	TTTboard
+)
+
+(defun run-game (board first-turn)
+	(format t "~A~%" (first board))
+	(format t "~A~%" (second board))
+	(format t "~A~%" (third board))
+)
