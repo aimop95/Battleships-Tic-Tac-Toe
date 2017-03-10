@@ -1,5 +1,5 @@
 (defun tic-tac-toe()
-	(setf board (list '(- - -) '(- - -) '(- - -)))
+	(setf board (list '(- - -) '(- - -) '(- - -))) ;(Andrew) FIXME: Doesn't reset board if (tic-tac-toe) is called twice in the console
 	(run)
 )
 (defun run ()
@@ -34,7 +34,7 @@
 		; ((gameOver)
 
 		; )
-		((checkWin turn)
+		((checkWin turn) ;(Andrew) TODO: I believe the problem here is that the game continues regardless of whether checkWin is true or not.
 			
 		)
 		(t
