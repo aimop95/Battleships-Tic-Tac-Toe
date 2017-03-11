@@ -1,7 +1,7 @@
 (defun tic-tac-toe()
 	;(setf tester (list '(1 2 3) '(4 5 6) '(7 8 9)))
 	(setf board 1)
-	(format t "It saw me.~%")
+	;(format t "It saw me.~%")
 	(setf board (list '(- - -) '(- - -) '(- - -)));(Andrew) FIXME: Doesn't reset board if (tic-tac-toe) is called twice in the console
 	(printBoard)
 	(run)
